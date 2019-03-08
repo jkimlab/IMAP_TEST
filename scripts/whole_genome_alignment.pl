@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 use strict;
 use warnings;
@@ -137,7 +137,7 @@ foreach my $ref_file (@ref_fas) {
 		`mkdir -p $out_dir/jobs`;
 		my $job_f = "$out_dir/jobs/$job_cnt.job"; 
 		open(O,">$job_f");
-		print O "#!/usr/bin/perl\n";
+		print O "#!/usr/bin/env perl\n";
 		print O "use strict;\n";
 		print O "use warnings;\n";
 		print O "`$lastz $ref_file $tar_file $lastzPar > $lav_f`;\n";
