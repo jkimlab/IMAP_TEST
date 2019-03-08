@@ -27,16 +27,16 @@ To install IMAP,
  
     1. Check & install the required perl libraries
       - Check the required perl libraries
-        ./build --check
+        ./build.pl --check
     
       - Install the required perl libraries
     
     2. Install IMAP package
-        ./build --install
+        ./build.pl --install
         
 To uninstall IMAP,
 
-        ./build --uninstall
+        ./build.pl --uninstall
 
 Running IMAP
 -------------------
