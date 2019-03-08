@@ -1,0 +1,1 @@
+../IMAP.pl -t 30 -p ex_params.txt -o ./ex_out 2> log

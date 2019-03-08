@@ -1,0 +1,39 @@
+############################################################
+## Sequencing read library information
+############################################################
+### Average insert sizes
+### Standard deviation of insert sizes
+### Path of read files (.fq(.gz))
+##### [Paired-end reads] p1, p2
+##### [Mate-pair reads] m1, m2
+[LIB]
+insertSize	340
+insertSizeSD	30
+p1  ./read_1.mini.fq.gz
+p2  ./read_2.mini.fq.gz
+
+############################################################
+## General assembly parameters
+############################################################
+## Minimum length of contigs
+MinContigLength	200
+## Kmer size for de novo assembly
+Kmer	79
+### Maximum read length for SOAPdenovo2
+MaxReadLength	101
+
+############################################################
+## RACA & DESCHRAMBLER parameters
+############################################################
+## You can use the outrgroup more than one, but the names must be different.
+Reference	S288C	./ref.fa.gz
+Outgroup	Saccharomyces_dairensis	./out.fa.gz
+### Tree must contain the names of a reference, target(s) and outgroup(s) (newick format)
+TREE	./tree.nwk
+### Synteny resolution
+Resolution	10000
+
+############################################################
+## Error correction parameters 
+############################################################
+IterationNumber	5
