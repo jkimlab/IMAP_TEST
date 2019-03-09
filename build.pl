@@ -104,7 +104,7 @@ print STDERR ">> Compile MaSuRCA... ";
 #### Compile MaSuRCA
 `tar xf $source_dir/MaSuRCA-3.3.1.tar.gz -C $thirdparty_path`;
 chdir("$thirdparty_path/MaSuRCA-3.3.1");
-`./install.sh 2> $thirdparty_path/mausrca.log`;
+`./install.sh 2> $thirdparty_path/masurca.log`;
 chdir("$Bin");
 if(-f "$thirdparty_path/MaSuRCA-3.3.1/bin/masurca"){
 	print STDERR "Done\n";
