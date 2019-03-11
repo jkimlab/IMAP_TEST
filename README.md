@@ -8,13 +8,14 @@ System requirements
 * Linux x64
 * Perl >= 5.8.x or new
 * Perl modules
-  - FindBin
-  - File::Basename
-  - Getopt::Long
-  - Cwd
   - Switch
   - Parallel::ForkManager
   - Bio::TreeIO
+* System libraries
+  - BOOST >= 1.46.0
+  - zlib
+  - libbz2
+  - libncurses
 
 Download source
 -------------------
@@ -37,6 +38,13 @@ To install IMAP,
 To uninstall IMAP,
 
         ./build.pl --uninstall
+
+
+Running IMAP with example dataset
+-------------------
+        ./build.pl --example
+        cd IMAP_EX
+        bash CMD
 
 Running IMAP
 -------------------
