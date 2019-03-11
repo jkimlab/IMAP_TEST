@@ -35,7 +35,9 @@ if($check){
 	else{ print STDERR "All perl modules exists!!\n";}
 } elsif($example){
 	`git clone https://github.com/jkimlab/IMAP_EX.git`;
+	print STDERR "Download read dataset...";
 	`$Bin/scripts/fastq-dump --split-files --gzip SRR1569791 -O $Bin/IMAP_EX/`;
+	print STDERR "Done.\n";
 } elsif($uninstall){
 	`rm -f $Bin/scripts/snp_edit`;
 	chdir("$thirdparty_path");
