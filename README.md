@@ -11,11 +11,11 @@ System requirements
   - Switch
   - Parallel::ForkManager
   - Bio::TreeIO
-* System libraries
-  - BOOST >= 1.46.0
-  - zlib
-  - libbz2
-  - libncurses
+* GCC >= 4.7
+* BOOST >= 1.46.0
+* zlib
+* libbz2
+* libncurses
 
 Download source
 -------------------
