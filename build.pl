@@ -10,18 +10,21 @@ use Check::Modules;
 my $install;
 my $uninstall;
 my $check;
+my $example;
 
 GetOptions (
+	"example" => \$example,
 	"install" => \$install,
 	"uninstall" => \$uninstall,
 	"check" => \$check,
 );
 
 
-if(!$check && !$install && !$uninstall){
+if(!$example && !$check && !$install && !$uninstall){
 	print STDERR "\$./build.pl --check\n";
 	print STDERR "\$./build.pl --install\n";
 	print STDERR "\$./build.pl --uninstall\n";
+	print STDERR "\$./build.pl --example\n";
 }
 
 my $thirdparty_path = "$Bin/scripts/thirdparty";
@@ -30,6 +33,9 @@ my $source_dir = "$thirdparty_path/sources";
 if($check){
 	if(!check_modules()){}
 	else{ print STDERR "All perl modules exists!!\n";}
+} elsif($example){
+	`git clone https://github.com/jkimlab/IMAP_EX.git`;
+	`$Bin/scripts/fastq-dump --split-files --gzip SRR1569791 -O $Bin/IMAP_EX/`;
 } elsif($uninstall){
 	`rm -f $Bin/scripts/snp_edit`;
 	chdir("$thirdparty_path");
