@@ -146,7 +146,7 @@ makeMasCMD();
 print STDERR "       (2-2) Starting the assembly\n";
 if (-e "$outDir/denovo_assemblies/masurca/log"){	`rm -f "$outDir/denovo_assemblies/masurca/log"`;	}
 exeMasurca();
-changeID("$outDir/denovo_assemblies/masurca/CA/10-gapclose/genome.scf.fasta", "$outDir/denovo_assemblies/denovo_masurca.fa");
+changeID("$outDir/denovo_assemblies/masurca/CA/final.genome.scf.fasta", "$outDir/denovo_assemblies/denovo_masurca.fa");
 `$kent/faSize -detailed $outDir/denovo_assemblies/denovo_masurca.fa > $outDir/denovo_assemblies/denovo_masurca.fa.sizes`;
 
 ## SOAPdenovo2 ##
