@@ -35,6 +35,8 @@ if($check){
 	else{ print STDERR "All perl modules exists!!\n";}
 } elsif($example){
 	`git clone https://github.com/jkimlab/IMAP_EX.git`;
+	`gunzip $Bin/IMAP_EX/S288C.fa.gz`;
+	`gunzip $Bin/IMAP_EX/Saccharomyces_dairensis.fa.gz`;
 	print STDERR "Download read dataset...";
 	`$Bin/scripts/fastq-dump --split-files --gzip SRR1569791 -O $Bin/IMAP_EX/`;
 	print STDERR "Done.\n";
