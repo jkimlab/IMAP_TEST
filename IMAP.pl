@@ -265,6 +265,6 @@ print STDERR "===========================================================\n\n\n"
 `mkdir -p $out_dir/errorCorrection`;
 `$errCorr_cmd -t $threads -i $iterNum -m $out_dir/meta_assembled_scaf.fa -p $running_param_f -o $out_dir/errorCorrection`;
 
-`cp $out_dir/errorCorrection/iter_$iterNum/meta_assembled_scaf.fa $out_dir/final_assembly.fa`
+`cp $out_dir/errorCorrection/iter_$iterNum/meta_assembled_scaf.fa $out_dir/final_assembly.fa`;
 
 print STDERR "Done.\n";
